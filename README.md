@@ -1,1 +1,1 @@
-# Organizaci-n-de-computadores
+# Organización de computadores
