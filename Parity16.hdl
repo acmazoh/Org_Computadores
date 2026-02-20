@@ -1,0 +1,34 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/1/Or.hdl
+/**
+ * Or gate:
+ * if (a or b) out = 1, else out = 0 
+ */
+CHIP Parity16 {
+    IN a[16];
+    OUT p;
+
+    PARTS:
+    //// Replace this comment with your code.
+    Xor(a=a[0] , b=a[1] , out=outXor1 );
+    Xor(a=a[2] , b=a[3] , out=outXor2 );
+    Xor(a=a[4] , b=a[5] , out=outXor3 );
+    Xor(a=a[6] , b=a[7] , out=outXor4 );
+    Xor(a=a[8] , b=a[9] , out=outXor5 );
+    Xor(a=a[10] , b=a[11] , out=outXor6 );
+    Xor(a=a[12] , b=a[13] , out=outXor7 );
+    Xor(a=a[14] , b=a[15] , out=outXor8 );
+    //-------------------------
+    Xor(a=outXor1 , b=outXor2 , out=outXor9 );
+    Xor(a=outXor3 , b=outXor4 , out=outXor10);
+    Xor(a=outXor5 , b=outXor6 , out=outXor11 );
+    Xor(a=outXor7 , b=outXor8 , out=outXor12 );
+    //------------------------
+    Xor(a=outXor9 , b=outXor10 , out=outXor13 );
+    Xor(a=outXor11 , b=outXor12 , out=outXor14 );
+    //-------------------------
+    Xor(a=outXor13 , b=outXor14 , out=p );
+    
+}
