@@ -1,0 +1,18 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/2/Add16.hdl
+/**
+ * 16-bit adder: Adds two 16-bit two's complement values.
+ * The most significant carry bit is ignored.
+ */
+CHIP ModNCounter16 {
+    IN n[16], init[16],en,load,rst;
+    OUT out[16],wrap;
+
+    PARTS:
+    //// Replace this comment with your code.
+    Register(in=init , load=load , out=outCarga );
+    Inc16(in=n , out=outInc);
+
+}
