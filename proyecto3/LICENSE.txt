@@ -1,0 +1,5 @@
+Este proyecto fue hecho con fines académicos.
+
+Se permite usar, copiar y modificar este código, siempre y cuando se mantenga
+este aviso y se dé crédito a los autores.
+
